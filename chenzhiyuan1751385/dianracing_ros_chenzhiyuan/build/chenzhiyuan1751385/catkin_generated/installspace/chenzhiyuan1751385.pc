@@ -1,0 +1,8 @@
+prefix=/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/install
+
+Name: chenzhiyuan1751385
+Description: Description of chenzhiyuan1751385
+Version: 0.0.0
+Cflags: -I/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/install/include
+Libs: -L/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/install/lib 
+Requires: message_runtime roscpp rospy std_msgs
