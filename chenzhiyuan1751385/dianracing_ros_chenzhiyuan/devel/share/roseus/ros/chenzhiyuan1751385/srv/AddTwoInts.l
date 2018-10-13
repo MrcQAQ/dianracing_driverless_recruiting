@@ -20,17 +20,19 @@
 
 (defclass chenzhiyuan1751385::AddTwoIntsRequest
   :super ros::object
-  :slots (_a _b ))
+  :slots (_a _b _c ))
 
 (defmethod chenzhiyuan1751385::AddTwoIntsRequest
   (:init
    (&key
     ((:a __a) 0)
     ((:b __b) 0)
+    ((:c __c) 0)
     )
    (send-super :init)
    (setq _a (round __a))
    (setq _b (round __b))
+   (setq _c (round __c))
    self)
   (:a
    (&optional __a)
@@ -38,12 +40,17 @@
   (:b
    (&optional __b)
    (if __b (setq _b __b)) _b)
+  (:c
+   (&optional __c)
+   (if __c (setq _c __c)) _c)
   (:serialization-length
    ()
    (+
     ;; int64 _a
     8
     ;; int64 _b
+    8
+    ;; int64 _c
     8
     ))
   (:serialize
@@ -74,6 +81,18 @@
               (write-long (if (>= _b 0) 0 #xffffffff) s))
              (t                                         ;; integer
               (write-long _b s)(write-long (if (>= _b 0) 0 #xffffffff) s)))
+     ;; int64 _c
+#+(or :alpha :irix6 :x86_64)
+       (progn (sys::poke _c (send s :buffer) (send s :count) :long) (incf (stream-count s) 8))
+#-(or :alpha :irix6 :x86_64)
+       (cond ((and (class _c) (= (length (_c . bv)) 2)) ;; bignum
+              (write-long (ash (elt (_c . bv) 0) 0) s)
+              (write-long (ash (elt (_c . bv) 1) -1) s))
+             ((and (class _c) (= (length (_c . bv)) 1)) ;; big1
+              (write-long (elt (_c . bv) 0) s)
+              (write-long (if (>= _c 0) 0 #xffffffff) s))
+             (t                                         ;; integer
+              (write-long _c s)(write-long (if (>= _c 0) 0 #xffffffff) s)))
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -95,6 +114,18 @@
       (setf _b (prog1 (sys::peek buf ptr- :long) (incf ptr- 8)))
 #-(or :alpha :irix6 :x86_64)
       (setf _b (let ((b0 (prog1 (sys::peek buf ptr- :integer) (incf ptr- 4)))
+                  (b1 (prog1 (sys::peek buf ptr- :integer) (incf ptr- 4))))
+              (cond ((= b1 -1) b0)
+                     ((and (= b1  0)
+                           (<= lisp::most-negative-fixnum b0 lisp::most-positive-fixnum))
+                      b0)
+                    ((= b1  0) (make-instance bignum :size 1 :bv (integer-vector b0)))
+                    (t (make-instance bignum :size 2 :bv (integer-vector b0 (ash b1 1)))))))
+   ;; int64 _c
+#+(or :alpha :irix6 :x86_64)
+      (setf _c (prog1 (sys::peek buf ptr- :long) (incf ptr- 8)))
+#-(or :alpha :irix6 :x86_64)
+      (setf _c (let ((b0 (prog1 (sys::peek buf ptr- :integer) (incf ptr- 4)))
                   (b1 (prog1 (sys::peek buf ptr- :integer) (incf ptr- 4))))
               (cond ((= b1 -1) b0)
                      ((and (= b1  0)
@@ -167,7 +198,7 @@
   :super ros::object
   :slots ())
 
-(setf (get chenzhiyuan1751385::AddTwoInts :md5sum-) "6a2e34150c00229791cc89ff309fff21")
+(setf (get chenzhiyuan1751385::AddTwoInts :md5sum-) "c9caccfcada3b6a45d8528a23bccaf1a")
 (setf (get chenzhiyuan1751385::AddTwoInts :datatype-) "chenzhiyuan1751385/AddTwoInts")
 (setf (get chenzhiyuan1751385::AddTwoInts :request) chenzhiyuan1751385::AddTwoIntsRequest)
 (setf (get chenzhiyuan1751385::AddTwoInts :response) chenzhiyuan1751385::AddTwoIntsResponse)
@@ -175,21 +206,23 @@
 (defmethod chenzhiyuan1751385::AddTwoIntsRequest
   (:response () (instance chenzhiyuan1751385::AddTwoIntsResponse :init)))
 
-(setf (get chenzhiyuan1751385::AddTwoIntsRequest :md5sum-) "6a2e34150c00229791cc89ff309fff21")
+(setf (get chenzhiyuan1751385::AddTwoIntsRequest :md5sum-) "c9caccfcada3b6a45d8528a23bccaf1a")
 (setf (get chenzhiyuan1751385::AddTwoIntsRequest :datatype-) "chenzhiyuan1751385/AddTwoIntsRequest")
 (setf (get chenzhiyuan1751385::AddTwoIntsRequest :definition-)
       "int64 a
 int64 b
+int64 c
 ---
 int64 sum
 
 ")
 
-(setf (get chenzhiyuan1751385::AddTwoIntsResponse :md5sum-) "6a2e34150c00229791cc89ff309fff21")
+(setf (get chenzhiyuan1751385::AddTwoIntsResponse :md5sum-) "c9caccfcada3b6a45d8528a23bccaf1a")
 (setf (get chenzhiyuan1751385::AddTwoIntsResponse :datatype-) "chenzhiyuan1751385/AddTwoIntsResponse")
 (setf (get chenzhiyuan1751385::AddTwoIntsResponse :definition-)
       "int64 a
 int64 b
+int64 c
 ---
 int64 sum
 
@@ -197,6 +230,6 @@ int64 sum
 
 
 
-(provide :chenzhiyuan1751385/AddTwoInts "6a2e34150c00229791cc89ff309fff21")
+(provide :chenzhiyuan1751385/AddTwoInts "c9caccfcada3b6a45d8528a23bccaf1a")
 
 

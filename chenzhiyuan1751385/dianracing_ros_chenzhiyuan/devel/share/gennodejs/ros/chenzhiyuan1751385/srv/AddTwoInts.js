@@ -23,6 +23,7 @@ class AddTwoIntsRequest {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.a = null;
       this.b = null;
+      this.c = null;
     }
     else {
       if (initObj.hasOwnProperty('a')) {
@@ -37,6 +38,12 @@ class AddTwoIntsRequest {
       else {
         this.b = 0;
       }
+      if (initObj.hasOwnProperty('c')) {
+        this.c = initObj.c
+      }
+      else {
+        this.c = 0;
+      }
     }
   }
 
@@ -46,6 +53,8 @@ class AddTwoIntsRequest {
     bufferOffset = _serializer.int64(obj.a, buffer, bufferOffset);
     // Serialize message field [b]
     bufferOffset = _serializer.int64(obj.b, buffer, bufferOffset);
+    // Serialize message field [c]
+    bufferOffset = _serializer.int64(obj.c, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -57,11 +66,13 @@ class AddTwoIntsRequest {
     data.a = _deserializer.int64(buffer, bufferOffset);
     // Deserialize message field [b]
     data.b = _deserializer.int64(buffer, bufferOffset);
+    // Deserialize message field [c]
+    data.c = _deserializer.int64(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 16;
+    return 24;
   }
 
   static datatype() {
@@ -71,7 +82,7 @@ class AddTwoIntsRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '36d09b846be0b371c5f190354dd3153e';
+    return 'c8559b52d432bccd240703f31aeca517';
   }
 
   static messageDefinition() {
@@ -79,6 +90,7 @@ class AddTwoIntsRequest {
     return `
     int64 a
     int64 b
+    int64 c
     
     `;
   }
@@ -101,6 +113,13 @@ class AddTwoIntsRequest {
     }
     else {
       resolved.b = 0
+    }
+
+    if (msg.c !== undefined) {
+      resolved.c = msg.c;
+    }
+    else {
+      resolved.c = 0
     }
 
     return resolved;
@@ -182,6 +201,6 @@ class AddTwoIntsResponse {
 module.exports = {
   Request: AddTwoIntsRequest,
   Response: AddTwoIntsResponse,
-  md5sum() { return '6a2e34150c00229791cc89ff309fff21'; },
+  md5sum() { return 'c9caccfcada3b6a45d8528a23bccaf1a'; },
   datatype() { return 'chenzhiyuan1751385/AddTwoInts'; }
 };

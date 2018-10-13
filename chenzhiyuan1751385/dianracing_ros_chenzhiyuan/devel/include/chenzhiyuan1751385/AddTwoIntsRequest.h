@@ -25,11 +25,13 @@ struct AddTwoIntsRequest_
 
   AddTwoIntsRequest_()
     : a(0)
-    , b(0)  {
+    , b(0)
+    , c(0)  {
     }
   AddTwoIntsRequest_(const ContainerAllocator& _alloc)
     : a(0)
-    , b(0)  {
+    , b(0)
+    , c(0)  {
   (void)_alloc;
     }
 
@@ -40,6 +42,9 @@ struct AddTwoIntsRequest_
 
    typedef int64_t _b_type;
   _b_type b;
+
+   typedef int64_t _c_type;
+  _c_type c;
 
 
 
@@ -119,12 +124,12 @@ struct MD5Sum< ::chenzhiyuan1751385::AddTwoIntsRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "36d09b846be0b371c5f190354dd3153e";
+    return "c8559b52d432bccd240703f31aeca517";
   }
 
   static const char* value(const ::chenzhiyuan1751385::AddTwoIntsRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x36d09b846be0b371ULL;
-  static const uint64_t static_value2 = 0xc5f190354dd3153eULL;
+  static const uint64_t static_value1 = 0xc8559b52d432bccdULL;
+  static const uint64_t static_value2 = 0x240703f31aeca517ULL;
 };
 
 template<class ContainerAllocator>
@@ -145,6 +150,7 @@ struct Definition< ::chenzhiyuan1751385::AddTwoIntsRequest_<ContainerAllocator> 
   {
     return "int64 a\n\
 int64 b\n\
+int64 c\n\
 ";
   }
 
@@ -165,6 +171,7 @@ namespace serialization
     {
       stream.next(m.a);
       stream.next(m.b);
+      stream.next(m.c);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -187,6 +194,8 @@ struct Printer< ::chenzhiyuan1751385::AddTwoIntsRequest_<ContainerAllocator> >
     Printer<int64_t>::stream(s, indent + "  ", v.a);
     s << indent << "b: ";
     Printer<int64_t>::stream(s, indent + "  ", v.b);
+    s << indent << "c: ";
+    Printer<int64_t>::stream(s, indent + "  ", v.c);
   }
 };
 

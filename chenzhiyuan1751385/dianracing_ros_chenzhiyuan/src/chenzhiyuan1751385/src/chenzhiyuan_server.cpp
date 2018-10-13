@@ -4,8 +4,8 @@
 bool add(chenzhiyuan1751385::AddTwoInts::Request  &req,
          chenzhiyuan1751385::AddTwoInts::Response &res)
 {
-  res.sum = req.a + req.b;
-  ROS_INFO("request: x=%ld, y=%ld", (long int)req.a, (long int)req.b);
+  res.sum = (req.a + req.b)*req.c;
+  ROS_INFO("request: x=%ld, y=%ld, z=%ld", (long int)req.a, (long int)req.b,(long int)req.c);
   ROS_INFO("sending back response: [%ld]", (long int)res.sum);
   return true;
 }

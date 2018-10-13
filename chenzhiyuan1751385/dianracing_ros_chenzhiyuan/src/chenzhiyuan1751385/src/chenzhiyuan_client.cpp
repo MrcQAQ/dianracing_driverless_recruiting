@@ -5,7 +5,7 @@
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "chenzhiyuan_client");
-  if (argc != 3)
+  if (argc != 4)
   {
     ROS_INFO("usage: add_two_ints_client X Y");
     return 1;
@@ -16,6 +16,7 @@ int main(int argc, char **argv)
   chenzhiyuan1751385::AddTwoInts srv;
   srv.request.a = atoll(argv[1]);
   srv.request.b = atoll(argv[2]);
+  srv.request.c = atoll(argv[3]);
   if (client.call(srv))
   {
     ROS_INFO("Sum: %ld", (long int)srv.response.sum);

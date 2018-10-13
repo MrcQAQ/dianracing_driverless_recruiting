@@ -16,6 +16,11 @@
     :reader b
     :initarg :b
     :type cl:integer
+    :initform 0)
+   (c
+    :reader c
+    :initarg :c
+    :type cl:integer
     :initform 0))
 )
 
@@ -36,6 +41,11 @@
 (cl:defmethod b-val ((m <AddTwoInts-request>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader chenzhiyuan1751385-srv:b-val is deprecated.  Use chenzhiyuan1751385-srv:b instead.")
   (b m))
+
+(cl:ensure-generic-function 'c-val :lambda-list '(m))
+(cl:defmethod c-val ((m <AddTwoInts-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader chenzhiyuan1751385-srv:c-val is deprecated.  Use chenzhiyuan1751385-srv:c instead.")
+  (c m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <AddTwoInts-request>) ostream)
   "Serializes a message object of type '<AddTwoInts-request>"
   (cl:let* ((signed (cl:slot-value msg 'a)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
@@ -49,6 +59,16 @@
     (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
     )
   (cl:let* ((signed (cl:slot-value msg 'b)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
+    )
+  (cl:let* ((signed (cl:slot-value msg 'c)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
@@ -81,6 +101,16 @@
       (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'b) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'c) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<AddTwoInts-request>)))
@@ -91,18 +121,19 @@
   "chenzhiyuan1751385/AddTwoIntsRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<AddTwoInts-request>)))
   "Returns md5sum for a message object of type '<AddTwoInts-request>"
-  "6a2e34150c00229791cc89ff309fff21")
+  "c9caccfcada3b6a45d8528a23bccaf1a")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'AddTwoInts-request)))
   "Returns md5sum for a message object of type 'AddTwoInts-request"
-  "6a2e34150c00229791cc89ff309fff21")
+  "c9caccfcada3b6a45d8528a23bccaf1a")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<AddTwoInts-request>)))
   "Returns full string definition for message of type '<AddTwoInts-request>"
-  (cl:format cl:nil "int64 a~%int64 b~%~%~%"))
+  (cl:format cl:nil "int64 a~%int64 b~%int64 c~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'AddTwoInts-request)))
   "Returns full string definition for message of type 'AddTwoInts-request"
-  (cl:format cl:nil "int64 a~%int64 b~%~%~%"))
+  (cl:format cl:nil "int64 a~%int64 b~%int64 c~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <AddTwoInts-request>))
   (cl:+ 0
+     8
      8
      8
 ))
@@ -111,6 +142,7 @@
   (cl:list 'AddTwoInts-request
     (cl:cons ':a (a msg))
     (cl:cons ':b (b msg))
+    (cl:cons ':c (c msg))
 ))
 ;//! \htmlinclude AddTwoInts-response.msg.html
 
@@ -169,10 +201,10 @@
   "chenzhiyuan1751385/AddTwoIntsResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<AddTwoInts-response>)))
   "Returns md5sum for a message object of type '<AddTwoInts-response>"
-  "6a2e34150c00229791cc89ff309fff21")
+  "c9caccfcada3b6a45d8528a23bccaf1a")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'AddTwoInts-response)))
   "Returns md5sum for a message object of type 'AddTwoInts-response"
-  "6a2e34150c00229791cc89ff309fff21")
+  "c9caccfcada3b6a45d8528a23bccaf1a")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<AddTwoInts-response>)))
   "Returns full string definition for message of type '<AddTwoInts-response>"
   (cl:format cl:nil "int64 sum~%~%~%~%"))
