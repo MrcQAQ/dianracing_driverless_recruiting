@@ -9,6 +9,8 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/devel:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build"
+export PYTHONPATH="/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/devel/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/devel/share/common-lisp"
 export ROS_PACKAGE_PATH="/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/src:/opt/ros/kinetic/share"

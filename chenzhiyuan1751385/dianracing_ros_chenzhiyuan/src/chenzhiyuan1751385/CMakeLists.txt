@@ -196,3 +196,12 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(chenzhiyuan_publisher src/chenzhiyuan_publisher.cpp)
+target_link_libraries(chenzhiyuan_publisher ${catkin_LIBRARIES})
+add_dependencies(chenzhiyuan_publisher chenzhiyuan_generate_messages_cpp)
+
+add_executable(chenzhiyuan_subscriber src/chenzhiyuan_subscriber.cpp)
+target_link_libraries(chenzhiyuan_subscriber ${catkin_LIBRARIES})
+add_dependencies(chenzhiyuan_subscriber chenzhiyuan_generate_messages_cpp)
+

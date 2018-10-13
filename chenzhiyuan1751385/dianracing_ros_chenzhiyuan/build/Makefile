@@ -283,6 +283,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named chenzhiyuan_subscriber
+
+# Build rule for target.
+chenzhiyuan_subscriber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chenzhiyuan_subscriber
+.PHONY : chenzhiyuan_subscriber
+
+# fast build rule for target.
+chenzhiyuan_subscriber/fast:
+	$(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/build
+.PHONY : chenzhiyuan_subscriber/fast
+
+#=============================================================================
 # Target rules for targets named chenzhiyuan1751385_genpy
 
 # Build rule for target.
@@ -478,6 +491,19 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named chenzhiyuan_publisher
+
+# Build rule for target.
+chenzhiyuan_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chenzhiyuan_publisher
+.PHONY : chenzhiyuan_publisher
+
+# fast build rule for target.
+chenzhiyuan_publisher/fast:
+	$(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/build
+.PHONY : chenzhiyuan_publisher/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_lisp
 
 # Build rule for target.
@@ -668,6 +694,7 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... chenzhiyuan_subscriber"
 	@echo "... chenzhiyuan1751385_genpy"
 	@echo "... chenzhiyuan1751385_generate_messages_py"
 	@echo "... chenzhiyuan1751385_gennodejs"
@@ -683,6 +710,7 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... chenzhiyuan_publisher"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"

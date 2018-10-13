@@ -29,12 +29,13 @@
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/gtest/gtest/CMakeFiles/install/strip.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/gtest/gtest/CMakeFiles/install/local.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/list_install_components.dir
-/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/install.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/rebuild_cache.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/edit_cache.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/test.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/install/local.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/install/strip.dir
+/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/install.dir
+/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_genpy.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_generate_messages_py.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_gennodejs.dir
@@ -50,6 +51,7 @@
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/std_msgs_generate_messages_cpp.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/roscpp_generate_messages_eus.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/std_msgs_generate_messages_nodejs.dir
+/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/roscpp_generate_messages_lisp.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/std_msgs_generate_messages_eus.dir
 /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/std_msgs_generate_messages_lisp.dir

@@ -66,18 +66,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -133,6 +121,18 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/CMakeFiles /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build/chenzhiyuan1751385/CMakeFiles/progress.marks
@@ -164,6 +164,21 @@ preinstall/fast:
 depend:
 	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/rule:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f CMakeFiles/Makefile2 chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/rule
+.PHONY : chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/rule
+
+# Convenience name for target.
+chenzhiyuan_subscriber: chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/rule
+
+.PHONY : chenzhiyuan_subscriber
+
+# fast build rule for target.
+chenzhiyuan_subscriber/fast:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/build
+.PHONY : chenzhiyuan_subscriber/fast
 
 # Convenience name for target.
 chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_genpy.dir/rule:
@@ -391,6 +406,21 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/rule:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f CMakeFiles/Makefile2 chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/rule
+.PHONY : chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/rule
+
+# Convenience name for target.
+chenzhiyuan_publisher: chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/rule
+
+.PHONY : chenzhiyuan_publisher
+
+# fast build rule for target.
+chenzhiyuan_publisher/fast:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/build
+.PHONY : chenzhiyuan_publisher/fast
+
+# Convenience name for target.
 chenzhiyuan1751385/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
 	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f CMakeFiles/Makefile2 chenzhiyuan1751385/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : chenzhiyuan1751385/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
@@ -585,6 +615,60 @@ chenzhiyuan1751385_geneus/fast:
 	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_geneus.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_geneus.dir/build
 .PHONY : chenzhiyuan1751385_geneus/fast
 
+src/chenzhiyuan_publisher.o: src/chenzhiyuan_publisher.cpp.o
+
+.PHONY : src/chenzhiyuan_publisher.o
+
+# target to build an object file
+src/chenzhiyuan_publisher.cpp.o:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/src/chenzhiyuan_publisher.cpp.o
+.PHONY : src/chenzhiyuan_publisher.cpp.o
+
+src/chenzhiyuan_publisher.i: src/chenzhiyuan_publisher.cpp.i
+
+.PHONY : src/chenzhiyuan_publisher.i
+
+# target to preprocess a source file
+src/chenzhiyuan_publisher.cpp.i:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/src/chenzhiyuan_publisher.cpp.i
+.PHONY : src/chenzhiyuan_publisher.cpp.i
+
+src/chenzhiyuan_publisher.s: src/chenzhiyuan_publisher.cpp.s
+
+.PHONY : src/chenzhiyuan_publisher.s
+
+# target to generate assembly for a file
+src/chenzhiyuan_publisher.cpp.s:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/src/chenzhiyuan_publisher.cpp.s
+.PHONY : src/chenzhiyuan_publisher.cpp.s
+
+src/chenzhiyuan_subscriber.o: src/chenzhiyuan_subscriber.cpp.o
+
+.PHONY : src/chenzhiyuan_subscriber.o
+
+# target to build an object file
+src/chenzhiyuan_subscriber.cpp.o:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/src/chenzhiyuan_subscriber.cpp.o
+.PHONY : src/chenzhiyuan_subscriber.cpp.o
+
+src/chenzhiyuan_subscriber.i: src/chenzhiyuan_subscriber.cpp.i
+
+.PHONY : src/chenzhiyuan_subscriber.i
+
+# target to preprocess a source file
+src/chenzhiyuan_subscriber.cpp.i:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/src/chenzhiyuan_subscriber.cpp.i
+.PHONY : src/chenzhiyuan_subscriber.cpp.i
+
+src/chenzhiyuan_subscriber.s: src/chenzhiyuan_subscriber.cpp.s
+
+.PHONY : src/chenzhiyuan_subscriber.s
+
+# target to generate assembly for a file
+src/chenzhiyuan_subscriber.cpp.s:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/src/chenzhiyuan_subscriber.cpp.s
+.PHONY : src/chenzhiyuan_subscriber.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -592,12 +676,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... list_install_components"
-	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... install"
+	@echo "... chenzhiyuan_subscriber"
 	@echo "... chenzhiyuan1751385_genpy"
 	@echo "... chenzhiyuan1751385_generate_messages_py"
 	@echo "... chenzhiyuan1751385_gennodejs"
@@ -613,6 +698,7 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... chenzhiyuan_publisher"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
@@ -626,6 +712,12 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... chenzhiyuan1751385_geneus"
+	@echo "... src/chenzhiyuan_publisher.o"
+	@echo "... src/chenzhiyuan_publisher.i"
+	@echo "... src/chenzhiyuan_publisher.s"
+	@echo "... src/chenzhiyuan_subscriber.o"
+	@echo "... src/chenzhiyuan_subscriber.i"
+	@echo "... src/chenzhiyuan_subscriber.s"
 .PHONY : help
 
 
