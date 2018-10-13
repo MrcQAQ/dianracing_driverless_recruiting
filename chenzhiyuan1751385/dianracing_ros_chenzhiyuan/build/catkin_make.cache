@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/devel -DCMAKE_INSTALL_PREFIX=/home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/install -G Unix Makefiles
