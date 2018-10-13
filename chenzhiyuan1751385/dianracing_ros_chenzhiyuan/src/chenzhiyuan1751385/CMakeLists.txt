@@ -205,3 +205,12 @@ add_executable(chenzhiyuan_subscriber src/chenzhiyuan_subscriber.cpp)
 target_link_libraries(chenzhiyuan_subscriber ${catkin_LIBRARIES})
 add_dependencies(chenzhiyuan_subscriber chenzhiyuan_generate_messages_cpp)
 
+add_executable(chenzhiyuan_server src/chenzhiyuan_server.cpp)
+target_link_libraries(chenzhiyuan_server ${catkin_LIBRARIES})
+add_dependencies(chenzhiyuan_server chenzhiyuan1751385_gencpp)
+
+add_executable(chenzhiyuan_client src/chenzhiyuan_client.cpp)
+target_link_libraries(chenzhiyuan_client ${catkin_LIBRARIES})
+add_dependencies(chenzhiyuan_client chenzhiyuan1751385_gencpp)
+
+

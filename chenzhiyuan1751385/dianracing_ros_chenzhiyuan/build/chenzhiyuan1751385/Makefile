@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/rule:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f CMakeFiles/Makefile2 chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/rule
+.PHONY : chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/rule
+
+# Convenience name for target.
+chenzhiyuan_server: chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/rule
+
+.PHONY : chenzhiyuan_server
+
+# fast build rule for target.
+chenzhiyuan_server/fast:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/build
+.PHONY : chenzhiyuan_server/fast
+
+# Convenience name for target.
 chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/rule:
 	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f CMakeFiles/Makefile2 chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/rule
 .PHONY : chenzhiyuan1751385/CMakeFiles/chenzhiyuan_subscriber.dir/rule
@@ -224,6 +239,21 @@ chenzhiyuan1751385_gennodejs: chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_g
 chenzhiyuan1751385_gennodejs/fast:
 	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_gennodejs.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_gennodejs.dir/build
 .PHONY : chenzhiyuan1751385_gennodejs/fast
+
+# Convenience name for target.
+chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/rule:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f CMakeFiles/Makefile2 chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/rule
+.PHONY : chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/rule
+
+# Convenience name for target.
+chenzhiyuan_client: chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/rule
+
+.PHONY : chenzhiyuan_client
+
+# fast build rule for target.
+chenzhiyuan_client/fast:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/build
+.PHONY : chenzhiyuan_client/fast
 
 # Convenience name for target.
 chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_generate_messages_nodejs.dir/rule:
@@ -615,6 +645,33 @@ chenzhiyuan1751385_geneus/fast:
 	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_geneus.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_geneus.dir/build
 .PHONY : chenzhiyuan1751385_geneus/fast
 
+src/chenzhiyuan_client.o: src/chenzhiyuan_client.cpp.o
+
+.PHONY : src/chenzhiyuan_client.o
+
+# target to build an object file
+src/chenzhiyuan_client.cpp.o:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/src/chenzhiyuan_client.cpp.o
+.PHONY : src/chenzhiyuan_client.cpp.o
+
+src/chenzhiyuan_client.i: src/chenzhiyuan_client.cpp.i
+
+.PHONY : src/chenzhiyuan_client.i
+
+# target to preprocess a source file
+src/chenzhiyuan_client.cpp.i:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/src/chenzhiyuan_client.cpp.i
+.PHONY : src/chenzhiyuan_client.cpp.i
+
+src/chenzhiyuan_client.s: src/chenzhiyuan_client.cpp.s
+
+.PHONY : src/chenzhiyuan_client.s
+
+# target to generate assembly for a file
+src/chenzhiyuan_client.cpp.s:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/src/chenzhiyuan_client.cpp.s
+.PHONY : src/chenzhiyuan_client.cpp.s
+
 src/chenzhiyuan_publisher.o: src/chenzhiyuan_publisher.cpp.o
 
 .PHONY : src/chenzhiyuan_publisher.o
@@ -641,6 +698,33 @@ src/chenzhiyuan_publisher.s: src/chenzhiyuan_publisher.cpp.s
 src/chenzhiyuan_publisher.cpp.s:
 	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_publisher.dir/src/chenzhiyuan_publisher.cpp.s
 .PHONY : src/chenzhiyuan_publisher.cpp.s
+
+src/chenzhiyuan_server.o: src/chenzhiyuan_server.cpp.o
+
+.PHONY : src/chenzhiyuan_server.o
+
+# target to build an object file
+src/chenzhiyuan_server.cpp.o:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/src/chenzhiyuan_server.cpp.o
+.PHONY : src/chenzhiyuan_server.cpp.o
+
+src/chenzhiyuan_server.i: src/chenzhiyuan_server.cpp.i
+
+.PHONY : src/chenzhiyuan_server.i
+
+# target to preprocess a source file
+src/chenzhiyuan_server.cpp.i:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/src/chenzhiyuan_server.cpp.i
+.PHONY : src/chenzhiyuan_server.cpp.i
+
+src/chenzhiyuan_server.s: src/chenzhiyuan_server.cpp.s
+
+.PHONY : src/chenzhiyuan_server.s
+
+# target to generate assembly for a file
+src/chenzhiyuan_server.cpp.s:
+	cd /home/mrc/MyFile/homework/chenzhiyuan1751385/dianracing_ros_chenzhiyuan/build && $(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/src/chenzhiyuan_server.cpp.s
+.PHONY : src/chenzhiyuan_server.cpp.s
 
 src/chenzhiyuan_subscriber.o: src/chenzhiyuan_subscriber.cpp.o
 
@@ -681,11 +765,13 @@ help:
 	@echo "... test"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... chenzhiyuan_server"
 	@echo "... install"
 	@echo "... chenzhiyuan_subscriber"
 	@echo "... chenzhiyuan1751385_genpy"
 	@echo "... chenzhiyuan1751385_generate_messages_py"
 	@echo "... chenzhiyuan1751385_gennodejs"
+	@echo "... chenzhiyuan_client"
 	@echo "... chenzhiyuan1751385_generate_messages_nodejs"
 	@echo "... chenzhiyuan1751385_genlisp"
 	@echo "... chenzhiyuan1751385_generate_messages_lisp"
@@ -712,9 +798,15 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... chenzhiyuan1751385_geneus"
+	@echo "... src/chenzhiyuan_client.o"
+	@echo "... src/chenzhiyuan_client.i"
+	@echo "... src/chenzhiyuan_client.s"
 	@echo "... src/chenzhiyuan_publisher.o"
 	@echo "... src/chenzhiyuan_publisher.i"
 	@echo "... src/chenzhiyuan_publisher.s"
+	@echo "... src/chenzhiyuan_server.o"
+	@echo "... src/chenzhiyuan_server.i"
+	@echo "... src/chenzhiyuan_server.s"
 	@echo "... src/chenzhiyuan_subscriber.o"
 	@echo "... src/chenzhiyuan_subscriber.i"
 	@echo "... src/chenzhiyuan_subscriber.s"

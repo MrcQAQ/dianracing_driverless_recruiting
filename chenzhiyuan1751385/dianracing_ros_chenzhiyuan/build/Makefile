@@ -283,6 +283,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named chenzhiyuan_server
+
+# Build rule for target.
+chenzhiyuan_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chenzhiyuan_server
+.PHONY : chenzhiyuan_server
+
+# fast build rule for target.
+chenzhiyuan_server/fast:
+	$(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_server.dir/build
+.PHONY : chenzhiyuan_server/fast
+
+#=============================================================================
 # Target rules for targets named chenzhiyuan_subscriber
 
 # Build rule for target.
@@ -333,6 +346,19 @@ chenzhiyuan1751385_gennodejs: cmake_check_build_system
 chenzhiyuan1751385_gennodejs/fast:
 	$(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_gennodejs.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan1751385_gennodejs.dir/build
 .PHONY : chenzhiyuan1751385_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named chenzhiyuan_client
+
+# Build rule for target.
+chenzhiyuan_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chenzhiyuan_client
+.PHONY : chenzhiyuan_client
+
+# fast build rule for target.
+chenzhiyuan_client/fast:
+	$(MAKE) -f chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/build.make chenzhiyuan1751385/CMakeFiles/chenzhiyuan_client.dir/build
+.PHONY : chenzhiyuan_client/fast
 
 #=============================================================================
 # Target rules for targets named chenzhiyuan1751385_generate_messages_nodejs
@@ -694,10 +720,12 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... chenzhiyuan_server"
 	@echo "... chenzhiyuan_subscriber"
 	@echo "... chenzhiyuan1751385_genpy"
 	@echo "... chenzhiyuan1751385_generate_messages_py"
 	@echo "... chenzhiyuan1751385_gennodejs"
+	@echo "... chenzhiyuan_client"
 	@echo "... chenzhiyuan1751385_generate_messages_nodejs"
 	@echo "... chenzhiyuan1751385_genlisp"
 	@echo "... chenzhiyuan1751385_generate_messages_lisp"
